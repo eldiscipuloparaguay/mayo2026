@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista El Discípulo - Mayo 2026</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <!-- Background Elements -->
+    <div class="glow-bg"></div>
+    <div class="fire-particles" id="particles"></div>
+
+    <!-- Header Navigation -->
+    <header class="app-header">
+        <div class="header-container">
+            <a href="#" class="brand" id="logo-nav">
+                <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Logo_El_Discipulo.png" alt="El Discípulo Logo" class="nav-logo">
+            </a>
+            <nav class="nav-menu" id="nav-links">
+                <a href="#home" class="nav-link active" data-target="home">Portada</a>
+                <a href="#art-editorial" class="nav-link" data-target="art-editorial">Editorial</a>
+                <a href="#art-teologico" class="nav-link" data-target="art-teologico">Teología</a>
+                <div class="dropdown">
+                    <span class="nav-link dropdown-toggle">Congregaciones</span>
+                    <div class="dropdown-content">
+                        <a href="#art-barrio-colon" data-target="art-barrio-colon">Barrio Colón</a>
+                        <a href="#art-caacupe" data-target="art-caacupe">Caacupé</a>
+                        <a href="#art-capitan-roa" data-target="art-capitan-roa">Capitán Roa</a>
+                        <a href="#art-luque" data-target="art-luque">Luque</a>
+                        <a href="#art-barrio-centro" data-target="art-barrio-centro">Barrio Centro</a>
+                        <a href="#art-arroyos-esteros" data-target="art-arroyos-esteros">Arroyos y Esteros</a>
+                    </div>
+                </div>
+                <a href="#art-colegio-inter" class="nav-link" data-target="art-colegio-inter">Colegio Internacional</a>
+                <a href="#art-casa-amistad" class="nav-link" data-target="art-casa-amistad">Casa de Amistad</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Cambiar tema">
+                    <!-- Sun Icon (SVG) -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon (SVG) -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <span class="theme-toggle-text" id="theme-toggle-text">Modo Claro</span>
+                </button>
+                <button class="hamburger-menu" id="hamburger-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="app-main">
+
+        <!-- PAGE 1: PORTADA & INDICE (HOME) -->
+        <section id="home" class="page active">
+            <!-- Hero Portada -->
+            <div class="hero-section">
+                <div class="hero-overlay"></div>
+                <div class="container" style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4rem; width: 100%; height: 100%;">
+                    <div class="hero-content" style="flex: 1; min-width: 300px; text-align: left; padding-top: 2rem;">
+                        <div class="badge-edition">Edición Mayo 2026</div>
+                        <h1 class="hero-title">Testigos de la libertad y el fuego</h1>
+                        <p class="hero-subtitle">Conmemorando Pentecostés, la Independencia Nacional, el Día de la Madre y el Día del Trabajador</p>
+                        <div class="hero-collage-indicator">
+                            <div class="indicator-item">
+                                <span class="icon">🔥</span>
+                                <span>Fuego del Espíritu</span>
+                            </div>
+                            <div class="indicator-item">
+                                <span class="icon">🇵🇾</span>
+                                <span>Libertad Patria</span>
+                            </div>
+                            <div class="indicator-item">
+                                <span class="icon">❤️</span>
+                                <span>Legado de las Madres</span>
+                            </div>
+                        </div>
+                        <div class="hero-actions-container">
+                            <a href="#art-editorial" class="btn btn-primary btn-glow" data-target="art-editorial">
+                                <span>Leer Editorial</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                            <a href="#grid-indice" class="btn btn-secondary">
+                                <span>Explorar Artículos</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-cover-container" style="flex: 1; min-width: 300px; display: flex; justify-content: center; align-items: center; z-index: 5;">
+                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/El_Discipulo_3.jpg" alt="Revista El Discípulo" style="max-height: 65vh; max-width: 100%; border-radius: 8px; box-shadow: 20px 20px 50px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.1); transform: perspective(1000px) rotateY(-15deg) rotateX(5deg); transition: transform 0.3s ease;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro Editorial Resume -->
+            <div class="intro-block container">
+                <div class="editorial-preview-card">
+                    <div class="ep-header">
+                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/icdc.png" alt="ICDC Chalice" class="ep-chalice">
+                        <div class="ep-meta">
+                            <span class="ep-label">Nota Editorial</span>
+                            <h2 class="ep-title">Un mes cargado de símbolos profundos</h2>
+                        </div>
+                    </div>
+                    <p class="ep-text">
+                        "Mayo es, por excelencia, el mes donde nuestra mirada se bifurca entre la historia de nuestra patria y el mover eterno del Espíritu Santo. Como cristianos, entendemos que la libertad no es meramente la ausencia de cadenas civiles; es un don divino... El Espíritu es el que dinamiza nuestras comunidades, el que nos impulsa a la misión y el que nos recuerda que, en la diversidad de nuestros dones, formamos un solo cuerpo..."
+                    </p>
+                    <div class="ep-author">— Carlos Ayala, Director General</div>
+                      <!-- Grid de Artículos (Índice) -->
+            <div id="grid-indice" class="articles-grid-section container">
+                <div class="section-header">
+                    <span class="section-tag">Contenido de este número</span>
+                    <h2 class="section-title">Índice editorial</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Card 1: Editorial -->
+                    <div class="article-card accent-red" data-target="art-editorial">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/foto_editorial.png');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Director General</div>
+                            <h3 class="card-title">Editorial: Testigos de la libertad y el fuego</h3>
+                            <p class="card-desc">Carlos Ayala reflexiona sobre los hilos que unen la Independencia Nacional, Pentecostés y la vocación cristiana en Paraguay.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Artículo Teológico -->
+                    <div class="article-card accent-fire" data-target="art-teologico">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Teologia/tama66-fire-3879031_1920.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Teología del mes</div>
+                            <h3 class="card-title">El fuego que dura</h3>
+                            <p class="card-desc">Lucas Mendoza explora cómo el Espíritu de Pentecostés no es solo una llamarada transitoria, sino una brasa constante y silenciosa en la fidelidad pequeña.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Barrio Colón -->
+                    <div class="article-card" data-target="art-barrio-colon">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/ESCUELA DE MUSICA.jpeg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Congregaciones</div>
+                            <h3 class="card-title">Crónica de comunión: Barrio Colón en movimiento</h3>
+                            <p class="card-desc">Conozca la vibrante vida comunitaria de Colón a través de la Liga de Damas, sus reuniones de intercesión virtual y el nuevo módulo de su Escuela de Música.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Caacupé -->
+                    <div class="article-card" data-target="art-caacupe">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_2.jpeg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Comunidad y fe</div>
+                            <h3 class="card-title">Caacupé: Homenajes, trabajo y hogar</h3>
+                            <p class="card-desc">La celebración del Día de la Madre y el reconocimiento al plantel del Campamento Jack Norment durante el Día del Trabajador.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Capitán Roa -->
+                    <div class="article-card" data-target="art-capitan-roa">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.14.jpeg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Madres de la fe</div>
+                            <h3 class="card-title">El legado viviente de Ña Mary Martínez</h3>
+                            <p class="card-desc">La apasionante biografía de una educadora, pionera del deporte y misionera en el Congo que cruzó océanos para servir y derribar fronteras.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Luque -->
+                    <div class="article-card" data-target="art-luque">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_2.jpeg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Legado vivo</div>
+                            <h3 class="card-title">Fe en generaciones: La obra en Luque</h3>
+                            <p class="card-desc">Los conmovedores testimonios de las hermanas Ceci, Juliana e Isabel, cuyas familias reflejan un legado que permanece firme generación tras generación.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card X: Barrio Centro -->
+                    <div class="article-card" data-target="art-barrio-centro">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Centro/Foto_santi.jpeg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Talento y fe</div>
+                            <h3 class="card-title">Barrio Centro: Santiago Torres Arriola</h3>
+                            <p class="card-desc">Conoce la historia de este joven de Coronel Oviedo, un ejemplo de madurez espiritual y pasión por el folclore paraguayo que inspira a su generación.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card Y: Arroyos y Esteros -->
+                    <div class="article-card" data-target="art-arroyos-esteros">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/miniatura.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Comunidad y fe</div>
+                            <h3 class="card-title">Arroyos y Esteros: Celebración y fraternidad</h3>
+                            <p class="card-desc">Homenajes a las madres, acción de gracias en comunidad y la celebración de los cumpleaños de los hermanos Elisa y Dany.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Colegio Internacional -->
+                    <div class="article-card span-2" data-target="art-colegio-inter">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/colegio-miniatura.png');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Educación cristiana</div>
+                            <h3 class="card-title">Colegio Internacional: Formando valores ciudadanos</h3>
+                            <p class="card-desc">Actividades en homenaje a la Patria, las asambleas del Día de la Madre y las reflexiones docentes sobre vocación y servicio de Margarita Casco y Darío Godoy.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Casa de Amistad -->
+                    <div class="article-card span-3" data-target="art-casa-amistad">
+                        <div class="card-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.9)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.51.jpeg');"></div>
+                        <div class="card-content">
+                            <div class="card-tag">Institución fraterna</div>
+                            <h3 class="card-title">Escuela Casa de Amistad: Sembrando fe y ciudadanía en Coronel Oviedo</h3>
+                            <p class="card-desc">Conozca la labor de esta valiosa obra educativa: testimonios de sus docentes, su emotivo homenaje a las madres y su gran desfile estudiantil patriótico.</p>
+                            <span class="card-btn">Leer Más</span>
+                        </div>
+                    </div>
+                </div>Más</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: EDITORIAL -->
+        <section id="art-editorial" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/foto_editorial.png');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag">Nota del director</span>
+                        <h1 class="post-title">Testigos de la libertad y el fuego</h1>
+                        <div class="post-author-block">
+                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/icdc.png" alt="Carlos Ayala" class="author-avatar">
+                            <div>
+                                <span class="author-name">Carlos Ayala</span>
+                                <span class="post-date">Director General de El Discípulo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="editorial-grid">
+                        <div class="editorial-main-text text-columns">
+                            <p class="lead-paragraph"><span class="drop-cap">R</span>eciban la paz del Señor, amada congregación de los Discípulos de Cristo. Nos encontramos ante las páginas de un nuevo número de El Discípulo, una edición nacida en el corazón de un mes de mayo que, en nuestra geografía y en nuestra fe, se presenta cargado de símbolos profundos. Al abrir este espacio digital, lo hacemos bajo una certeza que nos moviliza: somos, por gracia y vocación, "Testigos de la Libertad y el Fuego".</p>
+                            <p>Mayo es, por excelencia, el mes donde nuestra mirada se bifurca entre la historia de nuestra patria y el mover eterno del Espíritu Santo. Como cristianos, entendemos que la libertad no es meramente la ausencia de cadenas civiles; es un don divino. Celebrar la Independencia Nacional nos invita a reflexionar sobre nuestra responsabilidad como ciudadanos del Reino en este suelo paraguayo. Fuimos liberados para servir, para encarnar la justicia y para ser sal fuera de las paredes del templo.</p>
+                            <blockquote class="editorial-quote">
+                                "Fuimos liberados para servir, para encarnar la justicia y para ser sal fuera de las paredes del templo."
+                            </blockquote>
+                            <p>Pero esa libertad secular quedaría incompleta sin el combustible que enciende el motor de la Iglesia: el fuego de Pentecostés. Al recordar la efusión del Espíritu Santo, no conmemoramos un evento estático del pasado, sino una realidad vibrante que hoy sigue uniendo lo que el mundo intenta fragmentar con tanto ahínco. El Espíritu es el que dinamiza nuestras comunidades, el que nos impulsa a la misión y el que nos recuerda que, en la diversidad de nuestros dones, formamos un solo cuerpo.</p>
+                            <p>Ese fuego y esa libertad se traducen en historias cotidianas, palpables, que adornan de manera hermosa este número. Se manifiestan en la dignidad del mandato cultural a través del Día del Trabajador, recordándonos que cada labor es una forma de mayordomía. Se reflejan en el testimonio tierno y resistente de nuestras "Madres de la Fe", quienes con su discipulado diario sostienen el legado espiritual en nuestros hogares. Y lo vemos con profunda alegría en las aulas de nuestros colegios y en las familias de nuestras congregaciones, donde comprobamos que la fe no es una pieza de museo, sino un río vivo que pasa de abuelos a padres, y de padres a hijos.</p>
+                            <p>Les invito a recorrer estas páginas no como meros lectores, sino como quienes se sientan a la Mesa del Señor a compartir el pan y el vino. Que el viento recio del Espíritu sople con fuerza en nuestros hogares este mes, y que el fuego de Su amor nos encuentre siempre listos para ser testimonios vivos de libertad. ¡A Dios sea la gloria!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: ARTICULO TEOLOGICO (LUCAS MENDOZA) -->
+        <section id="art-teologico" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner banner-theology" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Teologia/tama66-fire-3879031_1920.jpg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag theology-tag">Teología y reflexión</span>
+                        <h1 class="post-title font-editorial">El fuego que dura</h1>
+                        <div class="post-author-block">
+                            <div class="author-details">
+                                <span class="author-name">Lucas Mendoza</span>
+                                <span class="post-date">Coronel Oviedo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="theology-layout text-columns">
+                        <p class="lead-paragraph"><span class="drop-cap red-cap">H</span>ay una cocina, en alguna parte del país, donde una mujer enciende la hornalla antes de que amanezca. Lleva cuarenta años haciendo lo mismo. La llama es pequeña, azul, pareja. Calienta el agua del mate, calienta la leche de los chicos que todavía duermen, calienta el día que todavía no empezó. Nadie la ve. Nadie le aplaude. Cuando el sol salga, esa llama ya se habrá apagado y nadie recordará que estuvo encendida. Pero el día arrancó por ella.</p>
+                        <p>Pensamos en Pentecostés y nos vamos directo al estruendo. Al viento recio. A las lenguas como de fuego repartidas sobre cada uno. Y está bien - eso pasó, la Escritura lo registra, y fue glorioso. Pero el milagro mayor de aquel día no fue lo que se vio en Jerusalén esa mañana. El milagro mayor fue que ese fuego no se apagó. Dos mil años después sigue ardiendo, en lugares donde nadie filma. En cocinas, en aulas, en talleres, en sillas de oración a las cinco de la mañana, en hermanos que abren el portón del templo cada domingo, aunque ya casi nadie los salude.</p>
+                        
+                        <div class="theology-aside-card">
+                            <span class="card-badge-accent">Pensamiento del Autor</span>
+                            <p class="aside-quote">"La llamarada impresiona; la brasa cocina. La llamarada se ve desde lejos; la brasa calienta a quien está cerca. La llamarada dura un rato; la brasa dura toda la noche. Y la mayor parte de la obra de Dios en este mundo se hace con brasa, no con llamarada."</p>
+                        </div>
+
+                        <p>A veces, cuando hablamos del Espíritu Santo, parece que solo lo reconocemos en su forma de llamarada. Lo alto, lo visible, lo intenso, lo que se nota. Y entonces medimos la espiritualidad por la altura del fuego - por cuánto se vio, cuánto se sintió, cuánto se pudo grabar. Pero el fuego del Espíritu no se mide así. La llamarada impresiona; la brasa cocina. La llamarada se ve desde lejos; la brasa calienta a quien está cerca. La llamarada dura un rato; la brasa dura toda la noche. Y la mayor parte de la obra de Dios en este mundo se hace con brasa, no con llamarada.</p>
+                        <p>Ahí está, creo, parte de la libertad que celebra esta edición. La libertad del Espíritu no es solamente la libertad para manifestarse en grande - es también, y sobre todo, la libertad de arder sin público. La libertad de no tener que demostrar nada. La libertad de servir cuando no hay cámara, de orar cuando nadie pregunta, de sostener cuando nadie agradece. Hay una espiritualidad ruidosa que necesita confirmación constante para creerse real. Y hay otra, más callada, que ya no la necesita. Esa segunda es la que dura.</p>
+                        
+                        <blockquote class="editorial-quote accent-red-quote">
+                            "La libertad del Espíritu es también, y sobre todo, la libertad de arder sin público."
+                        </blockquote>
+
+                        <p>Pablo le escribió a Timoteo, su hijo en la fe, una frase que vale para este mes y para todos los meses: <em>"te aconsejo que avives el fuego del don de Dios que está en ti"</em> (2 Timoteo 1:6). Avivar. No encender un fuego nuevo cada semana, sino cuidar el que ya está. Y enseguida aclara cómo se ve un fuego maduro: <em>"no nos ha dado Dios espíritu de cobardía, sino de poder, de amor y de dominio propio"</em> (v. 7). Dominio propio. La marca del fuego maduro del Espíritu no es el descontrol - es justamente lo contrario. Es alguien que arde, sí, pero también alguien a quien se le puede confiar el cuidado del fuego.</p>
+                        <p>Pentecostés sigue. No en lo ruidoso, sino en lo que dura. Sigue en esa madre que ora por un hijo que hace tiempo no la llama. Sigue en el obrero que llega temprano y trabaja como para el Señor, aunque el patrón no esté mirando. Sigue en el hermano que pone una silla, prende la luz y abre el portón un domingo más. Sigue, también, en este pueblo nuestro - independiente desde hace siglos, libre desde mucho antes - donde el Evangelio se sostiene menos por los grandes eventos y más por la fidelidad pequeña de mucha gente que nadie nombra.</p>
+                        <p class="final-moral">Que el Espíritu nos haga, en este Pentecostés, capaces de cuidar la brasa. De no confundir intensidad con permanencia. De confiar en que el fuego que más importa no es el que se ve, sino el que sigue ardiendo cuando todos se van. De aprender, de esa mujer en su cocina, que el día arranca por el fuego más callado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: BARRIO COLON -->
+        <section id="art-barrio-colon" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/ESCUELA DE MUSICA.jpeg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag">Congregación en acción</span>
+                        <h1 class="post-title">Crónica de comunión: Barrio Colón en movimiento</h1>
+                        <div class="post-author-block">
+                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/icdc.png" alt="Pastor Gilberto Aquino" class="author-avatar">
+                            <div>
+                                <span class="author-name">Pr. Gilberto Aquino</span>
+                                <span class="post-date">Barrio Colón, Asunción</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="split-layout">
+                        <div class="split-text">
+                            <p class="lead-paragraph">Si hay algo que caracteriza a la Iglesia Cristiana Discípulos de Cristo en el Barrio Colón es su dinamismo y su fidelidad en el altar de la oración. En este mes de mayo, bajo nuestro lema <strong>"Testigos de la Libertad y el Fuego"</strong>, compartimos con orgullo el testimonio visual de una comunidad que encarna el sacerdocio de todos los creyentes a través de la intercesión, la música y el servicio.</p>
+                            
+                            <h3>🔥 El fuego de la intercesión: un clamor que no cesa</h3>
+                            <p>El fuego del Espíritu se mantiene encendido en Barrio Colón a través de la oración constante. La Liga de Damas se reúne de manera presencial una vez al mes en el templo, pero la distancia no es barrera: todos los miércoles a las 19:00 hs. se conectan de forma telemática para clamar al Señor. ¿El fruto? Testimonios vivos de sanidad física y profunda restauración familiar.</p>
+                            <p>Del mismo modo, el Ministerio de Jóvenes marca su espacio de búsqueda espiritual cada miércoles a las 17:00 hs. por plataformas virtuales, demostrando que las nuevas tecnologías están al servicio del Reino.</p>
+                            
+                            <h3>🇵🇾 Libertad y clamor por la patria</h3>
+                            <p>Haciendo eco de las festividades de mayo, la congregación demuestra su compromiso ciudadano y espiritual. Todos los domingos se destina un tiempo especial de intercesión a favor de Paraguay, levantando un clamor por el bienestar de nuestras familias y por la guía de las autoridades espirituales y nacionales.</p>
+                            
+                            <h3>🌸 Honra a las madres y nuevos comienzos</h3>
+                            <p>La emotividad de este mes se vio reflejada en los preparativos y la celebración para honrar a las madres en su día. En un acto de profunda comunión, los hermanos y jóvenes de la iglesia dedicaron promesas de la Palabra de Dios a cada madre presente, sembrando verdad bíblica en sus corazones.</p>
+                            <p>Por último, la comunidad celebra el crecimiento de su Escuela de Música, la cual realizó con éxito el lanzamiento de un nuevo módulo de aprendizaje para sus alumnos/as. Oramos para que estos nuevos pasos estén llenos de creatividad, fe y perseverancia.</p>
+                            
+                            <div class="pastoral-blessing">
+                                <p><em>"Confiamos en que Aquel que comenzó la buena obra en ustedes la seguirá perfeccionando..."</em></p>
+                                <span class="pastoral-signature">— Pr. Gilberto Aquino</span>
+                            </div>
+                        </div>
+
+                        <!-- Side Gallery -->
+                        <div class="split-gallery">
+                            <h3 class="gallery-title">Registro fotográfico</h3>
+                            <div class="gallery-grid">
+                                <div class="gallery-item" data-caption="Escuela de Música: lanzamiento del nuevo módulo de aprendizaje.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/ESCUELA DE MUSICA.jpeg" alt="Escuela de Música">
+                                    <div class="item-overlay">Escuela de Música</div>
+                                </div>
+                                <div class="gallery-item" data-caption="Oramos por nuestro país en los domingos patrios.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/ORAMOS POR NUESTRO PAIS DIA PATRIO (1).jpeg" alt="Oración Día Patrio 1">
+                                    <div class="item-overlay">Clamor por Paraguay (1)</div>
+                                </div>
+                                <div class="gallery-item" data-caption="Destinando tiempo de intercesión a favor de Paraguay.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/ORAMOS POR NUESTRO PAIS DIA PATRIO (2).jpeg" alt="Oración Día Patrio 2">
+                                    <div class="item-overlay">Clamor por Paraguay (2)</div>
+                                </div>
+                                <div class="gallery-item" data-caption="Preparativos y honra a las madres en su día especial.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/FESTEJO DIA DE LA MADRE Y SUS PREPARATIVOS (1).jpeg" alt="Homenaje Madres 1">
+                                    <div class="item-overlay">Homenaje a Madres (1)</div>
+                                </div>
+                                <div class="gallery-item" data-caption="Jóvenes dedicando promesas y versículos a las madres.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/FESTEJO DIA DE LA MADRE Y SUS PREPARATIVOS (2).jpeg" alt="Homenaje Madres 2">
+                                    <div class="item-overlay">Homenaje a Madres (2)</div>
+                                </div>
+                                <div class="gallery-item" data-caption="Liga de Damas: reunión presencial de edificación mensual.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/LIGA DE DAMAS REUNION Y ORACION VIA TELELMATICA (1).jpeg" alt="Liga de Damas Presencial">
+                                    <div class="item-overlay">Liga de Damas</div>
+                                </div>
+                                <div class="gallery-item" data-caption="Ministerio de Jóvenes: reuniéndose por plataformas virtuales.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/MINISTERIO DE JOVENES DE VISITA AL MUSEO DE LA BIBLIA EN EEL CENTRO CULTURAL DEL PUERTO.jpeg" alt="Ministerio de Jóvenes">
+                                    <div class="item-overlay">Visita al Museo de la Biblia</div>
+                                </div>
+                                <div class="gallery-item" data-caption="Reunión telemática de la Liga de Damas los miércoles a las 19:00hs.">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Colon/LIGA DE DAMAS REUNION Y ORACION VIA TELELMATICA (2).jpeg" alt="Liga de Damas Virtual">
+                                    <div class="item-overlay">Liga de Damas (Virtual)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: CAACUPE -->
+        <section id="art-caacupe" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_2.jpeg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag">Campamento y comunidad</span>
+                        <h1 class="post-title">Caacupé: culto de la madre y reconocimiento al trabajador</h1>
+                        <div class="post-author-block">
+                            <div class="author-details">
+                                <span class="author-name">Campamento Jack Norment</span>
+                                <span class="post-date">Caacupé, Paraguay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="tabs-container">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="tab-madres">Día de la madre 2026</button>
+                            <button class="tab-btn" data-tab="tab-obreros">Día del trabajador en Jack Norment</button>
+                        </div>
+
+                        <div class="tab-content active" id="tab-madres">
+                            <div class="split-layout">
+                                <div class="split-text">
+                                    <h2>Homenaje a las madres en la congregación de Caacupé</h2>
+                                    <p class="lead-paragraph">Con motivo del Día de la Madre y con la idea de homenajear a las madres de nuestra comunidad, el domingo 10 de mayo fueron invitadas, de manera especial, madres de niños que participan habitualmente de las actividades de la Congregación en el Campamento Jack Norment.</p>
+                                    <p>Algunas de las invitadas aceptaron la propuesta y nos honraron con su presencia, sumándose a las madres que asisten con regularidad al templo. El culto especial de ese día incluyó un mensaje alusivo a cargo de <strong>Enzo Terol</strong>, enfocado en el valor del discipulado en el hogar y en la entrega amorosa cotidiana.</p>
+                                    <p>Al término de la reunión, se realizó la entrega de pequeños obsequios a cada una de las madres presentes y se compartió un refrigerio fraterno en los jardines del campamento.</p>
+                                    
+                                    <div class="blessing-card">
+                                        <p>"Gracias damos a Dios por las madres que guían a sus hijos en los caminos del Señor, y pedimos a nuestro Padre celestial que llene a todas de sabiduría para poder hacerlo como es Su voluntad."</p>
+                                    </div>
+                                </div>
+                                <div class="split-gallery">
+                                    <h3 class="gallery-title">Madres de la congregación de Caacupé</h3>
+                                    <div class="slider-container" id="slider-caacupe-madres">
+                                        <div class="slider-wrapper">
+                                            <div class="slide active"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_1.jpeg" alt="Madres Caacupé 0"></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_2.jpeg" alt="Madres Caacupé 1"><span class="slide-caption">Madres y miembros de la congregación</span></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_3.jpeg" alt="Madres Caacupé 2"><span class="slide-caption">Culto especial de homenaje</span></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_4.jpeg" alt="Madres Caacupé 3"><span class="slide-caption">Entrega de presentes</span></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_5.jpeg" alt="Madres Caacupé 4"><span class="slide-caption">Comunión en el campamento</span></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_6.jpeg" alt="Madres Caacupé 5"></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_7.jpeg" alt="Madres Caacupé 6"></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_8.jpeg" alt="Madres Caacupé 7"></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_9.jpeg" alt="Madres Caacupé 8"></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_10.jpeg" alt="Madres Caacupé 9"></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_11.jpeg" alt="Madres Caacupé 10"></div>
+                                            <div class="slide"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/extracted_image_12.jpeg" alt="Madres Caacupé 11"></div>
+                                        </div>
+                                        <div class="slider-controls">
+                                            <button class="slider-btn prev">&#10094;</button>
+                                            <button class="slider-btn next">&#10095;</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tab-obreros">
+                            <div class="split-layout">
+                                <div class="split-text">
+                                    <h2>Reconocimiento al plantel de colaboradores</h2>
+                                    <p class="lead-paragraph">El primero de mayo, en conmemoración del Día del Trabajador, se organizó un almuerzo especial de compañerismo en las instalaciones del Campamento Jack Norment con el propósito de homenajear al valioso equipo humano que día a día mantiene este espacio de bendición y educación ambiental.</p>
+                                    <p>Agradecemos al Señor por la vocación de servicio, la dedicación y el testimonio diario de cada uno de los colaboradores. Su labor detrás de escena permite recibir a cientos de niños, jóvenes y familias que visitan el campamento año tras año.</p>
+                                    
+                                    <div class="workers-list-card">
+                                        <h3>Equipo del campamento Jack Norment 2026</h3>
+                                        <div class="workers-grid">
+                                            <div class="worker-category">
+                                                <h4>Administración</h4>
+                                                <ul>
+                                                    <li>Mabel Terol</li>
+                                                    <li>Jorge Terol</li>
+                                                    <li>Víctor Ovelar</li>
+                                                    <li>Enzo Terol</li>
+                                                </ul>
+                                            </div>
+                                            <div class="worker-category">
+                                                <h4>Mantenimiento</h4>
+                                                <ul>
+                                                    <li>Fernando Álvarez</li>
+                                                    <li>Leonardo González</li>
+                                                    <li>Eduardo Ortega</li>
+                                                </ul>
+                                            </div>
+                                            <div class="worker-category">
+                                                <h4>Ayudantes</h4>
+                                                <ul>
+                                                    <li>Aracelli Colmán</li>
+                                                    <li>Enzo Colmán</li>
+                                                </ul>
+                                            </div>
+                                            <div class="worker-category">
+                                                <h4>Cocina</h4>
+                                                <ul>
+                                                    <li>Fidelina Cabrera</li>
+                                                    <li>Agustina Giménez</li>
+                                                    <li>Lourdes Cabrera</li>
+                                                    <li>Alejandra Cabrera</li>
+                                                    <li>Belén Vallejos</li>
+                                                    <li>Liz Sánchez</li>
+                                                    <li>Luz Rodríguez</li>
+                                                    <li>Elviria Fernández</li>
+                                                </ul>
+                                            </div>
+                                            <div class="worker-category">
+                                                <h4>EcoGranja 21</h4>
+                                                <ul>
+                                                    <li>Alexis Muñoz</li>
+                                                    <li>Alfredo Balbuena</li>
+                                                    <li>Ariel Ovelar</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="split-gallery">
+                                    <h3 class="gallery-title">Plantel de colaboradores</h3>
+                                    <div class="camp-worker-card">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Caacupe/plantel_campamento.png" alt="Personal Campamento Jack Norment" class="worker-photo">
+                                        <div class="photo-caption">El plantel completo reunido en el almuerzo del Día del Trabajador.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 6: CAPITAN ROA (MARY MARTINEZ) -->
+        <section id="art-capitan-roa" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.14.jpeg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag capitan-roa-tag">Voces de la iglesia</span>
+                        <h1 class="post-title">El legado viviente de Ña Mary Martínez</h1>
+                        <div class="post-author-block">
+                            <div class="author-details">
+                                <span class="author-name">Biografía Misionera</span>
+                                <span class="post-date">Barrio Capitán Roa, Coronel Oviedo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="editorial-grid">
+                        <div class="editorial-main-text text-columns">
+                            <p class="lead-paragraph"><span class="drop-cap red-cap">M</span>aría Epifania Martínez Godoy, conocida cariñosamente por todos como <strong>Ña Mary</strong>, nació el 7 de abril de 1950 en la antigua Ajos (hoy Coronel Oviedo). Su historia como educadora, pionera del deporte y misionera es un testimonio vivo de vocación y de ruptura de barreras culturales en base a una profunda fe cristiana.</p>
+                            
+                            <p>Su camino espiritual comenzó a los 10 años, con la llegada de los misioneros Rodolfo y Anamae Adams de la ICDC a Coronel Oviedo. Sus padres abrieron las puertas de su casa para realizar las primeras reuniones caseras con vecinos de la zona. Desde muy joven, Mary sintió el llamado de la enseñanza: sirvió como maestra de escuela dominical y líder en campamentos de jóvenes.</p>
+
+                            <p>Una vez obtenida su titulación docente, comenzó a trabajar en el Kindergarten de la Misión de Amistad en Asunción. Fue durante un taller de recreación que descubrió su pasión por el área corporal, lo que la llevó a cursar el profesorado de Educación Física en la ENEF. Se especializó en básquetbol, voleibol, handball y atletismo, deportes que también practicó como atleta de alto rendimiento. En su ciudad natal, organizó los primeros intercolegiales e inauguró el primer gimnasio formal, abriendo un camino inédito para el desarrollo físico femenino.</p>
+
+                            <blockquote class="editorial-quote accent-red-quote">
+                                "En Zaire enseñaba que Dios dio dones a cada persona y que las mujeres merecían las mismas oportunidades de desarrollo y recreación."
+                            </blockquote>
+
+                            <p>En 1980, como representante de la ICDC en el Congreso Ecuménico de Jamaica, conoció al pastor congoleño Efefe Elonda, quien le propuso asumir un inmenso desafío: cruzar el océano para servir como maestra en un internado de niñas en Mbandaka, Zaire (hoy República Democrática del Congo). Tras capacitarse en Estados Unidos y Francia, Mary llegó al <em>Licee Nseangwe Ndoyi</em> (Liceo de las Buenas Nuevas), donde a través del deporte y la fe enseñó a una generación de mujeres a reconocer su valor y dignidad como hijas de Dios.</p>
+
+                            <p>En 1984, de regreso en Coronel Oviedo, fundó el Jardín de Infantes "El Conejito" y el Centro Cultural Gymmart. Durante ese período, en uno de sus cursos de capacitación en el Campamento Jack Norment, conoció al profesor Saúl Falcón, con quien contrajo matrimonio y formó su familia. Juntos retornaron a África en 1985 para proseguir su tarea misionera, enfrentando valientemente las tensiones de las guerras civiles de la época, donde vieron la mano protectora de Dios en múltiples ocasiones, hasta su regreso definitivo en 1992.</p>
+
+                            <p>Lejos de retirarse, Mary continuó sirviendo en la iglesia y expandió el Centro Cultural Gymmart, institución que hoy cumple 42 años formando personas bajo una visión integral y cristocéntrica. Además, en un hermoso acto de mayordomía y amor fraternal, el predio de Gymmart ha abierto sus puertas desde hace 10 años para albergar los cultos y actividades semanales de la congregación de la ICDC del Barrio Capitán Roa.</p>
+                            
+                            <p class="final-moral">Hoy, a sus 76 años, Ña Mary constituye un testimonio tangible de fe, visión y perseverancia para las nuevas generaciones de la iglesia en el Paraguay.</p>
+                        </div>
+
+                        <!-- Sidebar with Photos -->
+                        <div class="sidebar-info-photos">
+                            <div class="info-card-roa">
+                                <h3>Hito misionero</h3>
+                                <p><strong>Lugar de misión:</strong> Mbandaka, Zaire (Congo)</p>
+                                <p><strong>Institución fundada:</strong> Jardín "El Conejito" y Centro Cultural Gymmart (42 años de trayectoria)</p>
+                                <p><strong>Congregación Capitán Roa:</strong> Reuniéndose en su predio desde hace 10 años.</p>
+                            </div>
+                            
+                            <div class="roa-photos-grid">
+                                <div class="photo-box">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.13.jpeg" alt="Mary Martinez Foto 1">
+                                </div>
+                                <div class="photo-box">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.13 (1).jpeg" alt="Mary Martinez Foto 2">
+                                </div>
+                                <div class="photo-box">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.14.jpeg" alt="Mary Martinez Foto 3">
+                                </div>
+                                <div class="photo-box">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.14 (1).jpeg" alt="Mary Martinez Foto 4">
+                                </div>
+                                <div class="photo-box">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.14 (2).jpeg" alt="Mary Martinez Foto 5">
+                                </div>
+                                <div class="photo-box">
+                                    <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Capitan_Roa/WhatsApp Image 2026-05-21 at 07.45.15.jpeg" alt="Mary Martinez Foto 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 7: LUQUE -->
+        <section id="art-luque" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_2.jpeg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag">Legado vivo</span>
+                        <h1 class="post-title">Fe en generaciones: la obra en Luque</h1>
+                        <div class="post-author-block">
+                            <div class="author-details">
+                                <span class="author-name">Crónica de la Congregación</span>
+                                <span class="post-date">Luque, Paraguay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="split-layout">
+                        <div class="split-text text-columns">
+                            <p class="lead-paragraph">Desde los inicios de la obra en la ciudad de Luque, muchas personas han sido testigos de la gracia del Señor. Hasta hoy, en la congregación se han acumulado tantos testimonios vivos que caminan entre nosotros, que esto solo nos ha llevado a reconocer la grandeza y la fidelidad de Dios.</p>
+                            
+                            <p>En un mes marcado por la libertad y por mujeres valientes, los fieles de la congregación pueden declarar que, así como una nación entera fue liberada en su independencia, también familias enteras y muchos corazones fueron libertados por la sangre de Jesucristo.</p>
+                            
+                            <div class="testimony-box">
+                                <h4>El Testimonio de la Hna. Ceci</h4>
+                                <p>"Rompió mis cadenas, me ayudó y llenó el vacío en mi vida. Reconozco y agradezco. Sigo adelante, firme, confiando en su Palabra y en su promesa."</p>
+                                <span class="testimony-meta">— Ceci, aferrándose a la fe a pesar de las tormentas.</span>
+                            </div>
+
+                            <p>La hermana <strong>Juliana</strong>, por su parte, es una de las fieles desde los inicios de la iglesia en Luque. Entregó su vida al Señor en medio de momentos muy duros y hoy, después de muchos años de fidelidad, puede declarar: <em>“Fueron situaciones que pasaron y fueron la oportunidad para que yo lo conozca. Le doy gracias al Señor porque hoy veo su Gloria”</em>. Hoy, junto con sus hijos, nietos y bisnietos, representan tres generaciones unidas y entregadas al servicio en las manos del Señor.</p>
+
+                            <div class="testimony-box">
+                                <h4>El Testimonio de la Hna. Isabel</h4>
+                                <p>"Hace 40 años, en medio de tiempos muy difíciles, recibí la palabra que cambiaría mi vida y la de mi descendencia: 'No estás sola, el Señor sabe todo lo que pasaste y estás sufriendo, pero Él te dice que ya no vas a estar sola'. No me prometió que no tendría tribulaciones, pero desde ese momento acepté al Señor y supe que nunca más estaría sola... Hoy tengo 5 hijos y 12 nietos encaminados en el Señor."</p>
+                                <span class="testimony-meta">— Isabel, 40 años de caminar en fe.</span>
+                            </div>
+
+                            <p>Desde los inicios de la obra en Luque, a través de evangelizaciones y reuniones caseras, muchas personas fueron encendidas por el Espíritu. Esa llama sigue viva hoy, atravesando distintas generaciones. Luque es una comunidad que se caracteriza por trabajar estrechamente con las familias, reuniendo a niños, jóvenes y adultos.</p>
+                            
+                            <p>Desde las reuniones caseras, los estudios bíblicos y las vigilias, hasta el trabajo con la niñez y los encuentros de jóvenes, la congregación se mueve con el lema de ser testigos activos del amor de Jesucristo. El domingo pasado la iglesia celebró a las madres destacando su identidad como hijas amadas del Padre celestial, reconfortadas para guiar a los suyos en la verdad.</p>
+                        </div>
+
+                        <!-- Gallery of Luque -->
+                        <div class="split-gallery">
+                            <h3 class="gallery-title">Galería de imágenes: Luque</h3>
+                            <div class="gallery-grid">
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_1.jpeg" alt="Luque Foto 1"><div class="item-overlay">Comunión Luque</div></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_2.jpeg" alt="Luque Foto 2"><div class="item-overlay">Celebración especial</div></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_3.jpeg" alt="Luque Foto 3"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_4.jpeg" alt="Luque Foto 4"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_5.jpeg" alt="Luque Foto 5"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_6.jpeg" alt="Luque Foto 6"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_7.png" alt="Luque Foto 7"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_8.png" alt="Luque Foto 8"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_9.png" alt="Luque Foto 9"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_10.png" alt="Luque Foto 10"></div>
+                                <div class="gallery-item"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Luque/extracted_image_11.png" alt="Luque Foto 11"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE X: BARRIO CENTRO -->
+        <section id="art-barrio-centro" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Centro/Foto_santi.jpeg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag">Jóvenes en acción</span>
+                        <h1 class="post-title">Santiago Torres Arriola: fe, talento y folclore</h1>
+                        <div class="post-author-block">
+                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Centro/logo_ICDC_CENEL_Oviedo_centro.jpg" alt="Logo Barrio Centro" class="author-avatar img-white-bg" style="object-fit: cover; border-radius: 50%;">
+                            <div>
+                                <span class="author-name">ICDC Barrio Centro</span>
+                                <span class="post-date">Coronel Oviedo, Paraguay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="split-layout">
+                        <div class="split-text">
+                            <p class="lead-paragraph"><strong>Santiago Torres Arriola</strong>, hijo de José Torres y Sara Arriola, y nieto de Victorina Monzón, pertenece a una de las familias pioneras de la iglesia cristiana Discípulos de Cristo de Coronel Oviedo – Centro.</p>
+                            
+                            <p>Es un adolescente de mucha fe, que sigue creciendo con una madurez espiritual de manera extraordinaria. Forma parte del ministerio de alabanza y siempre participa activamente en las actividades de la iglesia y en los campamentos, donde demuestra sus grandes talentos y el amor que tiene por servir a Dios.</p>
+                            
+                            <div class="testimony-box">
+                                <h4>Un joven ejemplar</h4>
+                                <p>"Es un joven valiente, admirable y ejemplar para la sociedad. Creció en la iglesia cristiana Discípulos de Cristo, desarrollándose con valores, humildad y dedicación."</p>
+                                <span class="testimony-meta">— Comunidad de Barrio Centro</span>
+                            </div>
+
+                            <p>Desde niño se destacó por ser muy talentoso, demostrando pasión por la música y el folclore paraguayo. Con el paso de los años fue creciendo, aprendiendo y perfeccionándose en la academia Tres Verbos, donde desarrolló aún más sus dones artísticos.</p>
+                            
+                            <p>Además de su crecimiento espiritual, Santiago se destaca en el ámbito del folclore paraguayo, siendo reconocido por su talento y esfuerzo. Entre sus logros más importantes se encuentran el primer puesto en el Festival del País 2024 con el tema “A mi Gran Profesor”, el prestigioso premio Félix Fernández, y premios en los más grandes festivales como Ñanduti y Guarambaré, reconocimientos que resaltan su dedicación y pasión por la música paraguaya.</p>
+                            
+                            <p>Sin duda, Santiago es un joven con un futuro prometedor, lleno de talentos y propósito, siendo inspiración para muchos jóvenes de su generación.</p>
+                        </div>
+                        
+                        <div class="split-image" style="display: flex; align-items: flex-start; justify-content: center; position: sticky; top: 100px;">
+                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Barrio_Centro/Foto_santi.jpeg" alt="Santiago Torres Arriola" style="width: 100%; border-radius: var(--border-radius-md); box-shadow: var(--shadow-main); object-fit: cover; border: 1px solid var(--border-color);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE X+1: ARROYOS Y ESTEROS -->
+        <section id="art-arroyos-esteros" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/fondo_articulo_.jpg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag">Comunidad y fe</span>
+                        <h1 class="post-title">Arroyos y Esteros: celebración y fraternidad</h1>
+                        <div class="post-author-block">
+                            <div class="author-details">
+                                <span class="author-name">Congregación Arroyos y Esteros</span>
+                                <span class="post-date">Mayo 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <div class="tabs-container">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="tab-arroyos-madres">Día de la madre y Hna. Elisa</button>
+                            <button class="tab-btn" data-tab="tab-arroyos-dany">Acción de gracias y Hno. Dany</button>
+                        </div>
+
+                        <!-- Tab 1: Festejo Día de la Madre y Cumpleaños Hna. Elisa -->
+                        <div class="tab-content active" id="tab-arroyos-madres">
+                            <div class="split-layout">
+                                <div class="split-text">
+                                    <h2>Homenaje a las madres y celebración comunitaria</h2>
+                                    <p class="lead-paragraph">La congregación de los Discípulos de Cristo en Arroyos y Esteros vivió una jornada repleta de regocijo, gratitud y estrecha comunión el pasado 17 de mayo de 2026. En un culto doblemente festivo, los miembros de la comunidad se reunieron para celebrar el Día de la Madre y rendir un sincero homenaje a aquellas mujeres que, con amor incondicional y fe inquebrantable, guían a sus familias en el temor del Señor.</p>
+                                    <p>Durante la celebración, los niños de la congregación tuvieron una participación muy especial al entregar hermosos regalitos preparados con sus propias manos, un emotivo gesto que reflejó el mandamiento bíblico de honrar a los padres. La atmósfera se llenó de alegría compartida cuando se sumó el festejo por el cumpleaños de la querida hermana Elisa, cuya vida de testimonio y servicio silencioso ha sido una bendición constante para toda la comunidad.</p>
+                                    <p>Los asistentes compartieron una deliciosa comida, risas y momentos de profunda oración, agradeciendo a Dios por el don de la maternidad y la vida de nuestra hermana Elisa, reafirmando una vez más que somos una gran familia unida en el amor de Cristo.</p>
+                                    
+                                    <div class="blessing-card">
+                                        <p>"Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él." — Proverbios 22:6</p>
+                                    </div>
+                                    
+                                    <h3 style="margin-top: 2rem; color: var(--primary);">Videos del festejo</h3>
+                                    <div class="amistad-video-grid">
+                                        <div class="amistad-video-card">
+                                            <video controls preload="metadata">
+                                                <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/video_1.mp4" type="video/mp4">
+                                                Tu navegador no soporta el reproductor de video.
+                                            </video>
+                                            <h5>Momento de entrega de regalos y canto</h5>
+                                        </div>
+                                        <div class="amistad-video-card">
+                                            <video controls preload="metadata">
+                                                <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/video_2.mp4" type="video/mp4">
+                                                Tu navegador no soporta el reproductor de video.
+                                            </video>
+                                            <h5>Celebración y confraternidad familiar</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="split-gallery">
+                                    <h3 class="gallery-title">Registro fotográfico del festejo</h3>
+                                    <div class="amistad-photo-grid">
+                                        <div class="gallery-item" data-caption="Madres y miembros de la congregación reunidos - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_1.jpeg" alt="Festejo Madre 1" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Momento de homenaje a las madres - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_2.jpeg" alt="Festejo Madre 2" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Niños entregando los regalitos del Día de la Madre - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_3.jpeg" alt="Festejo Madre 3" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Celebrando con alegría el Día de la Madre - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_4.jpeg" alt="Festejo Madre 4" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Las madres y sus regalos - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_5.jpeg" alt="Festejo Madre 5" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Cumpleaños de la Hna. Elisa en comunidad - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_6.jpeg" alt="Festejo Madre 6" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="La comunidad comparte una comida de compañerismo - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_7.jpeg" alt="Festejo Madre 7" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Fraternidad y alegría compartida - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_8.jpeg" alt="Festejo Madre 8" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Madres homenajeadas en su día - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_9.jpeg" alt="Festejo Madre 9" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Celebrando a las madres en familia - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_10.jpeg" alt="Festejo Madre 10" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Detalles del festejo comunitario - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_11.jpeg" alt="Festejo Madre 11" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Sonrisas y obsequios - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_12.jpeg" alt="Festejo Madre 12" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Hermanos reunidos en festejo - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_13.jpeg" alt="Festejo Madre 13" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Bendición y hermandad - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_14.jpeg" alt="Festejo Madre 14" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="El cariño de la congregación - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_15.jpeg" alt="Festejo Madre 15" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Cierre del festejo y foto grupal - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/festejo_16.jpeg" alt="Festejo Madre 16" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Acción de Gracias y Cumpleaños Hno. Dany -->
+                        <div class="tab-content" id="tab-arroyos-dany">
+                            <div class="split-layout">
+                                <div class="split-text">
+                                    <h2>Acción de gracias y cumpleaños del Hno. Dany</h2>
+                                    <p class="lead-paragraph">El 27 de mayo de 2026, la iglesia de Arroyos y Esteros se congregó nuevamente con un profundo espíritu de acción de gracias. La reunión giró en torno al agradecimiento a Dios por sus múltiples bendiciones sobre la comunidad local, compartiendo cánticos de adoración, testimonios de fe y un mensaje bíblico edificante centrado en la unidad espiritual y el servicio mutuo.</p>
+                                    <p>En esta ocasión, la comunidad también se unió para celebrar el cumpleaños del hermano Dany, expresándole su cariño y aprecio por su compromiso constante y su liderazgo servicial dentro de la congregación. La congregación le deseó abundantes bendiciones espirituales y salud para seguir caminando en los propósitos del Señor.</p>
+                                    <p>La celebración cerró con un momento de confraternidad donde se compartió una merienda y una deliciosa torta de cumpleaños, confirmando una vez más que Arroyos y Esteros es un lugar de encuentro, gratitud y discipulado activo.</p>
+                                    
+                                    <div class="blessing-card">
+                                        <p>"Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros en Cristo Jesús." — 1 Tesalonicenses 5:18</p>
+                                    </div>
+                                    
+                                    <h3 style="margin-top: 2rem; color: var(--primary);">Videos del culto y festejo</h3>
+                                    <div class="amistad-video-grid">
+                                        <div class="amistad-video-card">
+                                            <video controls preload="metadata">
+                                                <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/WhatsApp Video 2026-05-24 at 9.55.02 PM.mp4" type="video/mp4">
+                                                Tu navegador no soporta el reproductor de video.
+                                            </video>
+                                            <h5>Cánticos de alabanza y adoración</h5>
+                                        </div>
+                                        <div class="amistad-video-card">
+                                            <video controls preload="metadata">
+                                                <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/WhatsApp Video 2026-05-24 at 9.55.03 PM.mp4" type="video/mp4">
+                                                Tu navegador no soporta el reproductor de video.
+                                            </video>
+                                            <h5>Momento de oración y agradecimiento</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="split-gallery">
+                                    <h3 class="gallery-title">Galería de imágenes del culto</h3>
+                                    <div class="amistad-photo-grid">
+                                        <div class="gallery-item" data-caption="Hermanos en el culto de acción de gracias - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/WhatsApp Image 2026-05-24 at 9.55.02 PM.jpeg" alt="Accion Gracias 1" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Comunidad compartiendo la torta de cumpleaños - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/WhatsApp Image 2026-05-24 at 9.55.02 PM (1).jpeg" alt="Accion Gracias 2" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Momento de felicitaciones al Hno. Dany - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/WhatsApp Image 2026-05-24 at 9.55.03 PM.jpeg" alt="Accion Gracias 3" loading="lazy">
+                                        </div>
+                                        <div class="gallery-item" data-caption="Merienda fraternal en el templo - Arroyos y Esteros">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Arroyos_Esteros/WhatsApp Image 2026-05-24 at 9.55.03 PM (1).jpeg" alt="Accion Gracias 4" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 8: COLEGIO INTERNACIONAL -->
+        <section id="art-colegio-inter" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner banner-inter" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/471089090_1081835376753825_6388468182349930628_n.jpg'); background-size: cover; background-color: #1e1e24; background-repeat: no-repeat; background-position: center center;">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag tag-inter">Instituciones educativas</span>
+                        <h1 class="post-title">Colegio Internacional: vitrina de fe y ciudadanía</h1>
+                        <div class="post-author-block">
+                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/272834824_451334556470580_2948765771212198799_n.jpg" alt="Colegio Internacional Logo" class="author-avatar img-white-bg" style="object-fit: cover;">
+                            <div>
+                                <span class="author-name">Comunidad Educativa</span>
+                                <span class="post-date">Asunción, Paraguay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <!-- Reflection of the School -->
+                    <div class="school-reflection-card">
+                        <h2>Fomento de valores cristianos y ciudadanos en el marco del mes de la patria</h2>
+                        <p class="lead-paragraph">En el marco de la conmemoración de nuestra Independencia Nacional, el Colegio Internacional aporta a la formación de ciudadanos íntegro y comprometidos con su país a través de espacios formativos, formaciones especiales en homenaje a la patria, producciones audiovisuales impulsadas por los propios estudiantes, expresiones artísticas y diversas actividades pedagógicas, promoviendo así el conocimiento de nuestras raíces, la valoración de la libertad y el desarrollo de valores como el respeto, la responsabilidad, el servicio y la integridad. De esta manera, el Colegio Internacional trasciende la enseñanza académica y contribuye a formar generaciones que honran su historia, viven su fe y asumen con compromiso su rol dentro de la sociedad.</p>
+                    </div>
+
+                    <!-- Teacher Vocations Section -->
+                    <div class="teachers-section">
+                        <div class="section-header">
+                            <span class="section-tag">Vocación de Servicio</span>
+                            <h2 class="section-title">Mensajes de los educadores en el mes del trabajador</h2>
+                            <div class="section-line"></div>
+                        </div>
+
+                        <div class="teachers-grid">
+                            <!-- Teacher 1: Margarita Casco -->
+                            <div class="teacher-card">
+                                <div class="teacher-header">
+                                    <div class="teacher-avatar-group">
+                                        <div class="teacher-avatar" style="background-image: url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/mar1_miniatura.jpg');"></div>
+                                    </div>
+                                    <div class="teacher-info">
+                                        <h3>Margarita Casco Aveiro</h3>
+                                        <span class="teacher-title">Coordinadora de Artes de 3er Ciclo y Ed. Media</span>
+                                        <span class="teacher-degree">UPAP / UNA / Gestora Cultural y Liturgista</span>
+                                    </div>
+                                </div>
+                                <div class="teacher-body">
+                                    <p class="t-intro">"Mi vocación hacia la docencia la fui descubriendo a través de las actividades de la iglesia (campamentos, escuela dominical, cursos para líderes, etc.), viendo la entrega, dedicación y responsabilidad con que trabajaban las parejas de misioneros: Carter y Wiley..."</p>
+                                    <p>De Juanito aprendí a poner en práctica —parafraseando a Colosenses— que todo lo que haga debe ser como para Dios... y eso ha sido mi norte desde siempre, en mis ya más de 40 años de servicio educativo camino a la jubilación. Mi especialidad es la Educación a través del Arte, legado que también obtuve de Juanito y María Victoria Servín (la recordada hermana Mavi).</p>
+                                    
+                                    <div class="tips-box">
+                                        <h4>Consejos para el caminar docente:</h4>
+                                        <ul>
+                                            <li><strong>Orar:</strong> por el día y por cada persona que va a estar en contacto contigo. Los alumnos sabrán que eres alguien a quien acudir en momentos de necesidad.</li>
+                                            <li><strong>Ver al ser humano:</strong> antes que cualquier tarea, porque amar a Dios implica amar al otro tal cual es.</li>
+                                            <li><strong>Calendario a la vista:</strong> planificar con el esquema Antes (preparación), Durante (desarrollo) y Después (evaluación).</li>
+                                            <li><strong>Coherencia y ejemplo:</strong> No puedo exigir algo que no soy capaz de dar. Los hechos dicen más que las palabras.</li>
+                                            <li><strong>Actualización:</strong> La capacitación constante en un mundo dinámico es fundamental.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Individual Margarita Photo Carousel Link -->
+                                <div class="margarita-photos">
+                                    <h4>Registro de actividades:</h4>
+                                    <div class="mar-photos-row">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/mar1.jpeg" alt="Margarita 1" data-caption="La expresión artística como un canal de fe y aprendizaje">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/mar2.jpeg" alt="Margarita 2" data-caption="Guiando con creatividad y dedicación en cada aula">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/mar3.jpeg" alt="Margarita 3" data-caption="Con Juanito, mi gran maestro">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/mar4.jpeg" alt="Margarita 4" data-caption="El arte como puente de comunión en la enseñanza">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Teacher 2: Darío Godoy -->
+                            <div class="teacher-card">
+                                <div class="teacher-header">
+                                    <div class="teacher-avatar-group">
+                                        <div class="teacher-avatar" style="background-image: url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/dario_miniatura.jpeg');"></div>
+                                    </div>
+                                    <div class="teacher-info">
+                                        <h3>Prof. Pr. Darío Godoy</h3>
+                                        <span class="teacher-title">Docente de Educación Cristiana</span>
+                                    </div>
+                                </div>
+                                <div class="teacher-body">
+                                    <p class="lead-text">"Ser parte del equipo de trabajo del Colegio Internacional es un gran privilegio, especialmente en mi labor como docente de Educación Cristiana. Cada día representa el hermoso desafío de transmitir, a través de la Palabra de Dios, los principios y valores cristianos que caracterizan a la institución, llegando al corazón y a la mente de niños y jóvenes que necesitan reconocer la importancia de Dios en sus vidas."</p>
+                                    <p>Poder aportar un poco de todo lo que el colegio brinda a sus estudiantes es, sin duda, una oportunidad de servicio. A lo largo de estos años, he tenido la bendición de desarrollar diversos temas en clase, acompañar campamentos, participar en Celebraciones de Fe y cultos, así como contribuir en la formación de líderes para la vida mediante distintas actividades.</p>
+                                    <p class="highlight-p">Ha sido un camino de mucho aprendizaje y crecimiento, en el que he podido ver la fidelidad y la bondad de Dios en cada etapa.</p>
+                                    
+                                    <!-- Individual Dario Photo Row -->
+                                    <div class="margarita-photos">
+                                        <h4>Registro de actividades:</h4>
+                                        <div class="mar-photos-row">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/dario_1.jpeg" alt="Darío 1" data-caption="Transmitiendo fe y valores a través de las ondas de Radio Inter">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/dario_2.jpeg" alt="Darío 2" data-caption="El hermoso desafío de guiar a niños y jóvenes en el camino de Dios">
+                                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/dario_3.jpeg" alt="Darío 3" data-caption="La familia del Prof. Darío: sus tres hijos cursan estudios en el Inter">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Activities & Links -->
+                    <div class="media-resources-section">
+                        <div class="section-header">
+                            <span class="section-tag">Galería de Actividades</span>
+                            <h2 class="section-title">Registro especial: Colegio Internacional</h2>
+                            <div class="section-line"></div>
+                        </div>
+
+                        <div class="resources-grid">
+                            <!-- 1. Asamblea 3er Grado B -->
+                            <div class="resource-card block-full" style="margin-bottom: 2rem;">
+                                <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--primary);">Asamblea 3er grado B</h3>
+                                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; -webkit-line-clamp: unset;">Registro fotográfico de las asambleas especiales preparadas por los alumnos de tercer grado en honor a las madres y la patria.</p>
+                                
+                                <h4 style="margin-top: 1rem; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-main);">Galería (12 fotos):</h4>
+                                <div class="amistad-photo-grid">
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Presentación musical"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8618.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Alumnos cantando"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8625.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Poesía coral"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8634.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Solistas especiales"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8646.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Homenaje a las madres"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8654.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Cuadro de baile"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8685.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Escenografía patria"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8687.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Delegación grupal"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8714.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Palabras de bienvenida"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8722.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Entrega de obsequios"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8726.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Festejo en aula"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8749.JPG" alt="Asamblea" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Asamblea 3er Grado B - Compartir con las madres"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_8758.JPG" alt="Asamblea" loading="lazy"></div>
+                                </div>
+                            </div>
+
+                            <!-- 2. Acto 3er Ciclo y Media -->
+                            <div class="resource-card block-full" style="margin-bottom: 2rem;">
+                                <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--primary);">Acto 3er ciclo y media</h3>
+                                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; -webkit-line-clamp: unset;">Formación y acto especial en el polideportivo de la institución, rindiendo homenaje conjunto a las madres y a la patria.</p>
+                                
+                                <h4 style="margin-top: 1rem; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-main);">Galería (12 fotos):</h4>
+                                <div class="amistad-photo-grid">
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Apertura oficial"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9273.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Homenaje patriótico"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9308.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Discurso estudiantil"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9320.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Profesores y directivos"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9367.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Escolta de banderas"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9385.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Himno Nacional"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9461.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Delegaciones escolares"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9467.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Momentos del acto"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9476.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Presentación artística"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9508.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Alumnos rindiendo honores"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9526.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Chiroleras del colegio"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9609.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 3er Ciclo y Media - Cierre de formación"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9623.JPG" alt="Acto" loading="lazy"></div>
+                                </div>
+                            </div>
+
+                            <!-- 3. Acto 1er y 2do Ciclo -->
+                            <div class="resource-card block-full" style="margin-bottom: 2rem;">
+                                <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--primary);">Acto 1er y 2do ciclo</h3>
+                                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; -webkit-line-clamp: unset;">Las expresiones artísticas, danzas típicas, cantos y reflexiones a cargo de los niveles de educación básica elemental.</p>
+                                
+                                <h4 style="margin-top: 1rem; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-main);">Galería (10 fotos):</h4>
+                                <div class="amistad-photo-grid">
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Alumnos de primaria"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0047.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Chiroleras junior"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0048.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Banda infantil"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0049.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Desfile interno"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0050.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Representantes del ciclo"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0051.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Danza folclórica"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0179.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Baile típico paraguayo"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0246.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Homenaje artístico"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0247.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Presentación de violines"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0310.JPG" alt="Acto" loading="lazy"></div>
+                                    <div class="gallery-item" data-caption="Acto 1er y 2do Ciclo - Canto coral"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_0334.JPG" alt="Acto" loading="lazy"></div>
+                                </div>
+                            </div>
+
+                            <!-- 4. Taller de Violín & Academia de Historia -->
+                            <div class="resource-card block-full" style="margin-bottom: 2rem;">
+                                <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--primary);">Taller de violín y producciones audiovisuales</h3>
+                                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; -webkit-line-clamp: unset;">Material audiovisual y sonoro producido por los estudiantes: la serenata de Radio Inter y el video conmemorativo de la Academia de Historia.</p>
+                                
+                                <div class="split-layout" style="gap: 2rem;">
+                                    <div class="split-text" style="flex: 1;">
+                                        <div class="audio-player-card" style="margin-bottom: 2rem;">
+                                            <div class="player-visual">
+                                                <div class="disc-vinyl" id="vinyl-disc">
+                                                    <div class="disc-center"></div>
+                                                </div>
+                                            </div>
+                                            <div class="player-info">
+                                                <span class="player-tag">Serenata de Radio Inter</span>
+                                                <h4>Taller de violín</h4>
+                                                <p>Escuche la serenata del Taller de Violín en honor a las madres en Radio Inter.</p>
+                                                <div class="player-links">
+                                                    <a href="https://open.spotify.com/episode/0dO926B3xDsVD3AlukeARu?si=nkQNEQx1TnGFEat0K0NcNg" target="_blank" class="btn btn-sm btn-spotify">Escuchar en Spotify</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-main);">Galería del taller de violín (6 fotos):</h4>
+                                        <div class="amistad-photo-grid">
+                                            <div class="gallery-item" data-caption="Taller de Violín - Presentación grupal"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9803.JPG" alt="Violín" loading="lazy"></div>
+                                            <div class="gallery-item" data-caption="Taller de Violín - Solista"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9806.JPG" alt="Violín" loading="lazy"></div>
+                                            <div class="gallery-item" data-caption="Taller de Violín - Dúo en radio"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9815.JPG" alt="Violín" loading="lazy"></div>
+                                            <div class="gallery-item" data-caption="Taller de Violín - Instrumentos"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9824.JPG" alt="Violín" loading="lazy"></div>
+                                            <div class="gallery-item" data-caption="Taller de Violín - Foco de cámara"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9827.JPG" alt="Violín" loading="lazy"></div>
+                                            <div class="gallery-item" data-caption="Taller de Violín - Transmisión en vivo"><img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Colegio_Internacional/DSC_9840.JPG" alt="Violín" loading="lazy"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="split-video" style="flex: 1; min-width: 280px;">
+                                        <div class="premium-player">
+                                            <video controls preload="metadata">
+                                                <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/video_independencia.mp4" type="video/mp4">
+                                                Tu navegador no soporta el video.
+                                            </video>
+                                            <div class="player-caption">
+                                                <span class="play-icon">🎥</span>
+                                                <span>Conmemoración - Academia de Historia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 9: ESCUELA CASA DE AMISTAD -->
+        <section id="art-casa-amistad" class="page article-view">
+            <div class="article-layout container">
+                <div class="editorial-banner banner-amistad" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(12,12,14,0.95)), url('https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.51.jpeg');">
+                    <button class="btn-back" data-target="home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver al Índice</span>
+                    </button>
+                    <div class="editorial-meta">
+                        <span class="post-tag tag-amistad">Instituciones fraternas</span>
+                        <h1 class="post-title">Escuela Casa de Amistad: sembrando fe y ciudadanía</h1>
+                        <div class="post-author-block">
+                            <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/logo casa de amistad.jpg" alt="Logo Escuela Casa de Amistad" class="author-avatar img-white-bg" style="object-fit: cover; border-radius: 50%;">
+                            <div>
+                                <span class="author-name">Escuela Casa de Amistad</span>
+                                <span class="post-date">Coronel Oviedo, Paraguay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content-wrapper">
+                    <!-- Main split layout with 2 columns text and sticky video player on the right -->
+                    <div class="split-layout">
+                        <div class="split-text">
+                            <div class="text-columns">
+                                <p class="lead-paragraph"><span class="drop-cap red-cap">L</span>a Escuela Casa de Amistad de Coronel Oviedo se constituye en un faro de valores y servicio en su comunidad. En este mes de mayo, en conmemoración de la Independencia Nacional y el Día de la Madre, reafirmamos nuestro compromiso de formar ciudadanos íntegros, capaces de transformar su entorno con fe y patriotismo.</p>
+                                <p>Estas fechas tan significativas nos invitan a mirar nuestro entorno y a reconocer el papel fundamental de las madres y mujeres que nos rodean, quienes guían, edifican y sostienen a las familias paraguayas en el presente. Para nuestra institución, honrar a la madre y a la patria significa asumir la alta responsabilidad de educar con propósito, desde nuestras aulas en Coronel Oviedo para todo el país, con la firme visión de construir una sociedad más justa, solidaria y temerosa de Dios para las futuras generaciones.</p>
+                                <p>La patria y la madre son dos conceptos profundamente unidos en nuestra historia nacional. A través del trabajo diario, sembramos la semilla de la libertad y el conocimiento en el corazón de cada estudiante, guiándolos no solo en el crecimiento académico, sino también en el desarrollo de un carácter noble y de valores eternos que trascienden el aula.</p>
+                            </div>
+                        </div>
+
+                        <div class="split-video" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; position: sticky; top: 100px; z-index: 5;">
+                            <div class="premium-player">
+                                <video controls preload="metadata">
+                                    <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/video_presentacion.mp4" type="video/mp4">
+                                    Tu navegador no soporta la reproducción de video.
+                                </video>
+                                <div class="player-caption">
+                                    <span class="play-icon">🎥</span>
+                                    <span>Presentación del Desfile Estudiantil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teachers Messages Section -->
+                    <div class="teachers-section" style="margin-top: 4rem;">
+                        <div class="section-header">
+                            <span class="section-tag">Vocación de Servicio</span>
+                            <h2 class="section-title">Mensajes de los educadores en el mes del trabajador</h2>
+                            <div class="section-line"></div>
+                        </div>
+
+                        <div class="teachers-grid">
+                            <!-- Teacher 1 -->
+                            <div class="teacher-card">
+                                <div class="teacher-header">
+                                    <div class="teacher-avatar-group">
+                                        <div class="teacher-avatar default-avatar">ED</div>
+                                    </div>
+                                    <div class="teacher-info">
+                                        <h3>Testimonio docente</h3>
+                                        <span class="teacher-title">Educación y Valores</span>
+                                    </div>
+                                </div>
+                                <div class="teacher-body">
+                                    <p class="lead-text">"El impacto que puedo dejar a las generaciones futuras y la satisfacción personal de haber sido parte de la formación de un futuro ciudadano de bien."</p>
+                                    <p>Ser parte del crecimiento integral de niños y jóvenes nos desafía a dar lo mejor cada día, sabiendo que la educación es la herramienta más poderosa para edificar nuestra sociedad.</p>
+                                </div>
+                            </div>
+
+                            <!-- Teacher 2 -->
+                            <div class="teacher-card">
+                                <div class="teacher-header">
+                                    <div class="teacher-avatar-group">
+                                        <div class="teacher-avatar default-avatar">PM</div>
+                                    </div>
+                                    <div class="teacher-info">
+                                        <h3>Mensaje de maestra</h3>
+                                        <span class="teacher-title">Desarrollo Integral</span>
+                                    </div>
+                                </div>
+                                <div class="teacher-body">
+                                    <p class="lead-text">"Mi rol como maestra me da tanta satisfacción por tener ese espacio de poder transferir no solo conocimiento y ciencia sino valores que le harán mejores dentro de la sociedad."</p>
+                                    <p>Las aulas son campos de siembra donde cada palabra de aliento y cada principio enseñado contribuyen a forjar personas íntegras y comprometidas.</p>
+                                </div>
+                            </div>
+
+                            <!-- Teacher 3 -->
+                            <div class="teacher-card">
+                                <div class="teacher-header">
+                                    <div class="teacher-avatar-group">
+                                        <div class="teacher-avatar default-avatar">PE</div>
+                                    </div>
+                                    <div class="teacher-info">
+                                        <h3>Vocación y ministerio</h3>
+                                        <span class="teacher-title">Crecimiento y Fe</span>
+                                    </div>
+                                </div>
+                                <div class="teacher-body">
+                                    <p class="lead-text">"En esta casa de estudios este es un trabajo que me llena de satisfacción al tiempo de crecer profesionalmente tengo la oportunidad de llevar adelante un ministerio."</p>
+                                    <p>La labor docente trasciende el aspecto profesional; es una vocación divina de servicio que nos permite guiar y modelar vidas bajo el amor de Dios.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Activities & Galleries -->
+                    <div class="media-resources-section" style="margin-top: 4rem;">
+                        <div class="section-header">
+                            <span class="section-tag">Galerías de Actividades</span>
+                            <h2 class="section-title">Registro especial: Escuela Casa de Amistad</h2>
+                            <div class="section-line"></div>
+                        </div>
+
+                        <div class="resources-grid">
+                            <!-- Materia 1: Homenajeamos a las madres -->
+                            <div class="resource-card block-full" style="margin-bottom: 2rem;">
+                                <span class="res-icon">🌸</span>
+                                <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--primary);">Homenajeamos a las madres con danzas, canciones y poesías</h3>
+                                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; -webkit-line-clamp: unset;">Registro audiovisual del festival especial dedicado a honrar a las madres de nuestra comunidad educativa.</p>
+                                
+                                <h4 style="margin-top: 1rem; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-main);">Presentaciones en video (5 videos):</h4>
+                                <div class="amistad-video-grid">
+                                    <!-- Video 1 -->
+                                    <div class="amistad-video-card">
+                                        <video controls preload="metadata">
+                                            <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/video_1.mp4" type="video/mp4">
+                                        </video>
+                                        <h5>Presentación de danza 1</h5>
+                                    </div>
+                                    <!-- Video 2 -->
+                                    <div class="amistad-video-card">
+                                        <video controls preload="metadata">
+                                            <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/video_2.mp4" type="video/mp4">
+                                        </video>
+                                        <h5>Presentación de danza 2</h5>
+                                    </div>
+                                    <!-- Video 3 -->
+                                    <div class="amistad-video-card">
+                                        <video controls preload="metadata">
+                                            <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/video_3.mp4" type="video/mp4">
+                                        </video>
+                                        <h5>Poesía homenaje</h5>
+                                    </div>
+                                    <!-- Video 4 -->
+                                    <div class="amistad-video-card">
+                                        <video controls preload="metadata">
+                                            <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/video_4.mp4" type="video/mp4">
+                                        </video>
+                                        <h5>Canciones infantiles</h5>
+                                    </div>
+                                    <!-- Video 5 -->
+                                    <div class="amistad-video-card">
+                                        <video controls preload="metadata">
+                                            <source src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/video_5.mp4" type="video/mp4">
+                                        </video>
+                                        <h5>Festejo en comunidad</h5>
+                                    </div>
+                                </div>
+
+                                <h4 style="margin-top: 2rem; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-main);">Registro fotográfico (5 fotos):</h4>
+                                <div class="amistad-photo-grid">
+                                    <!-- Image 1 -->
+                                    <div class="gallery-item" data-caption="Homenaje a las madres - Danza representativa">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/image_1.jpeg" alt="Danza de las Madres 1">
+                                    </div>
+                                    <!-- Image 2 -->
+                                    <div class="gallery-item" data-caption="Homenaje a las madres - Niños cantando">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/image_2.jpeg" alt="Niños cantando">
+                                    </div>
+                                    <!-- Image 3 -->
+                                    <div class="gallery-item" data-caption="Homenaje a las madres - Coreografía grupal">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/image_3.jpeg" alt="Coreografía grupal">
+                                    </div>
+                                    <!-- Image 4 -->
+                                    <div class="gallery-item" data-caption="Homenaje a las madres - Alumnos recitando">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/image_4.jpeg" alt="Alumnos recitando">
+                                    </div>
+                                    <!-- Image 5 -->
+                                    <div class="gallery-item" data-caption="Homenaje a las madres - Compartir comunitario">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/image_5.jpeg" alt="Compartir comunitario">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Materia 2: Participación de la Escuela en el Desfile -->
+                            <div class="resource-card block-full">
+                                <span class="res-icon">🇵🇾</span>
+                                <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--primary);">Participación de la escuela en el desfile estudiantil homenaje a la independencia patria</h3>
+                                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; -webkit-line-clamp: unset;">Galería de fotos de nuestra delegación escolar desfilando con orgullo y gallardía por las calles de Coronel Oviedo en honor a la Patria.</p>
+                                
+                                <h4 style="margin-top: 1rem; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-main);">Galería del desfile estudiantil (18 fotos):</h4>
+                                <div class="amistad-photo-grid">
+                                    <!-- Image 1 -->
+                                    <div class="gallery-item" data-caption="Delegación de la Escuela Casa de Amistad en el desfile patrio">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.51 (1).jpeg" alt="Desfile 1">
+                                    </div>
+                                    <!-- Image 2 -->
+                                    <div class="gallery-item" data-caption="Abanderados y escoltas portando los símbolos nacionales">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.51 (2).jpeg" alt="Desfile 2">
+                                    </div>
+                                    <!-- Image 3 -->
+                                    <div class="gallery-item" data-caption="Estudiantes marchando en formation">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.51 (3).jpeg" alt="Desfile 3">
+                                    </div>
+                                    <!-- Image 4 -->
+                                    <div class="gallery-item" data-caption="Delegación principal de la escuela">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.51.jpeg" alt="Desfile 4">
+                                    </div>
+                                    <!-- Image 5 -->
+                                    <div class="gallery-item" data-caption="Plantel docente y directores acompañando a los alumnos">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.52 (1).jpeg" alt="Desfile 5">
+                                    </div>
+                                    <!-- Image 6 -->
+                                    <div class="gallery-item" data-caption="Alumnos en trajes típicos paraguayos">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.52 (2).jpeg" alt="Desfile 6">
+                                    </div>
+                                    <!-- Image 7 -->
+                                    <div class="gallery-item" data-caption="Escoltas de la bandera escolar">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.52 (3).jpeg" alt="Desfile 7">
+                                    </div>
+                                    <!-- Image 8 -->
+                                    <div class="gallery-item" data-caption="Público ovacionando a la Escuela Casa de Amistad">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.52 (4).jpeg" alt="Desfile 8">
+                                    </div>
+                                    <!-- Image 9 -->
+                                    <div class="gallery-item" data-caption="Alumnos de primaria marchando con alegría">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.52.jpeg" alt="Desfile 9">
+                                    </div>
+                                    <!-- Image 10 -->
+                                    <div class="gallery-item" data-caption="Marchando por la avenida principal">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.53 (1).jpeg" alt="Desfile 10">
+                                    </div>
+                                    <!-- Image 11 -->
+                                    <div class="gallery-item" data-caption="Chiroleras liderando la delegación">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.53 (2).jpeg" alt="Desfile 11">
+                                    </div>
+                                    <!-- Image 12 -->
+                                    <div class="gallery-item" data-caption="El paso firme de los estudiantes frente al palco oficial">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.53 (3).jpeg" alt="Desfile 12">
+                                    </div>
+                                    <!-- Image 13 -->
+                                    <div class="gallery-item" data-caption="Detalle del estandarte de la Escuela Casa de Amistad">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.53 (4).jpeg" alt="Desfile 13">
+                                    </div>
+                                    <!-- Image 14 -->
+                                    <div class="gallery-item" data-caption="Profesores guiando a las filas estudiantiles">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.53.jpeg" alt="Desfile 14">
+                                    </div>
+                                    <!-- Image 15 -->
+                                    <div class="gallery-item" data-caption="Estudiantes sosteniendo carteles alegóricos a la patria">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.54 (1).jpeg" alt="Desfile 15">
+                                    </div>
+                                    <!-- Image 16 -->
+                                    <div class="gallery-item" data-caption="El uniforme impecable de gala escolar">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.54 (2).jpeg" alt="Desfile 16">
+                                    </div>
+                                    <!-- Image 17 -->
+                                    <div class="gallery-item" data-caption="Orgullo escolar en el paso del desfile">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.54 (3).jpeg" alt="Desfile 17">
+                                    </div>
+                                    <!-- Image 18 -->
+                                    <div class="gallery-item" data-caption="Gran cierre de la delegación de la escuela">
+                                        <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/Casa_Amistad/WhatsApp Image 2026-05-22 at 09.15.54.jpeg" alt="Desfile 18">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- App Footer -->
+    <footer class="app-footer">
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/icdc.png" alt="El Discípulo Logo" class="footer-logo">
+                <div class="footer-brand-text">
+                    <h3>El Discípulo</h3>
+                    <p>Revista de la Iglesia Cristiana Discípulos de Cristo en el Paraguay</p>
+                </div>
+            </div>
+            <div class="footer-credits">
+                <p>Edición Mayo 2026: <strong>"Testigos de la Libertad y el Fuego"</strong></p>
+                <p>Director General: Carlos Ayala</p>
+            </div>
+            <div class="footer-icdc">
+                <img src="https://awuxyevdilboedtaferj.supabase.co/storage/v1/object/public/Revista/icdc.png" alt="ICDC Logo" class="footer-icdc-logo">
+                <span>ICDC Paraguay</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Iglesia Cristiana Discípulos de Cristo. Todos los derechos reservados. Edición Digital.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
